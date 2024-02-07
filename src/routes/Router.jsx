@@ -74,36 +74,36 @@ export default function Router() {
         },
       ],
     },
-    {
-      path: '/admin',
-      element: (
-        <AdminGuard>
-          <AdminLayout />
-        </AdminGuard>
-      ),
-      children: [
-        {
-          path: '/admin',
-          element: <Navigate to="/admin/user-management" />,
-        },
-        {
-          path: '/admin/user-management',
-          element: <UserManagement />,
-        },
-        {
-          path: '/admin/job-management',
-          element: <JobManagement />,
-        },
-        {
-          path: '/admin/job-type-management',
-          element: <JobTypeManagement />,
-        },
-        {
-          path: '/admin/service-management',
-          element: <ServiceManagement />,
-        },
-      ],
-    },
+    // {
+    //   path: '/admin',
+    //   element: (
+    //     <AdminGuard>
+    //       <AdminLayout />
+    //     </AdminGuard>
+    //   ),
+    //   children: [
+    //     {
+    //       path: '/admin',
+    //       element: <Navigate to="/admin/user-management" />,
+    //     },
+    //     {
+    //       path: '/admin/user-management',
+    //       element: <UserManagement />,
+    //     },
+    //     {
+    //       path: '/admin/job-management',
+    //       element: <JobManagement />,
+    //     },
+    //     {
+    //       path: '/admin/job-type-management',
+    //       element: <JobTypeManagement />,
+    //     },
+    //     {
+    //       path: '/admin/service-management',
+    //       element: <ServiceManagement />,
+    //     },
+    //   ],
+    // },
     {
       path: '*',
       element: <PageNotFound />,
